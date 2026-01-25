@@ -1,6 +1,6 @@
 # 🔥 Burner Phone Skill
 
-![Burner Phone](https://raw.githubusercontent.com/SouthpawIN/burner-phone/main/assets/banner.png)
+![Burner Phone](burner-phone-pfp.webp)
 
 Control Android devices directly via ADB commands - perfect for burner phones, testing devices, or automation tasks.
 
