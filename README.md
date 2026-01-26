@@ -4,13 +4,13 @@
 
 Control Android devices directly via ADB commands - perfect for burner phones, testing devices, or automation tasks.
 
-## ✨ Features
+## Features
 
 - **Vision-First**: Uses AI to analyze screen content and provide exact coordinates
 - **Direct Control**: ADB commands for tapping, swiping, typing
 - **Openskills Compatible**: Works with any agent that supports the openskills format
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the skill to your skills directory
@@ -22,19 +22,19 @@ chmod +x scripts/setup.sh
 ./scripts/setup.sh
 ```
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.8+
 - ADB (Android Debug Bridge)
 
-## 🔧 Configuration
+## Configuration
 
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `SENTER_URL` | `http://localhost:8081` | Senter Server URL |
 | `VISION_MODEL` | `qwen2.5-omni:3b` | Vision model name |
 
-## 📖 Usage
+## Usage
 
 The skill follows a **Vision Feedback Loop**:
 
@@ -59,7 +59,7 @@ adb shell input tap 540 1200
 adb shell input swipe 540 1800 540 800 300
 ```
 
-## 🗂️ Directory Structure
+## Directory Structure
 
 ```
 burner-phone/
@@ -72,7 +72,7 @@ burner-phone/
     └── screen.png        # Screenshots saved here
 ```
 
-## 🔗 Related Projects
+## Related Projects
 
 - [Senter](https://github.com/SouthpawIN/Senter) - Agent that uses this skill
 - [Senter-Server](https://github.com/SouthpawIN/Senter-Server) - Model proxy server
