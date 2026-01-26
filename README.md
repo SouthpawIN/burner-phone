@@ -26,8 +26,6 @@ chmod +x scripts/setup.sh
 
 - Python 3.8+
 - ADB (Android Debug Bridge)
-- Ollama with `qwen2.5-omni:3b` model
-- [Senter-Server](https://github.com/SouthpawIN/Senter-Server) running
 
 ## 🔧 Configuration
 
