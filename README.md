@@ -77,6 +77,6 @@ burner-phone/
 - [Senter](https://github.com/SouthpawIN/Senter) - Agent that uses this skill
 - [Senter-Server](https://github.com/SouthpawIN/Senter-Server) - Model proxy server
 
-## 📝 License
+## License
 
 MIT
