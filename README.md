@@ -4,6 +4,23 @@
 
 **Universal Android Device Control Framework** - Works on physical phones (Termux or ADB), emulators, and even integrates with AI agents as a self-aware phone companion.
 
+## Use Cases
+
+### 1. Burner Phone Automation
+Control temporary/test devices for automation tasks, testing, or privacy-focused workflows.
+
+### 2. Spare Phone AI Companion
+Turn an old phone into an always-listening AI device with camera, mic, and speaker access.
+
+### 3. Emulator Testing
+Test Android apps or automate workflows without needing physical hardware.
+
+### 4. Multi-Device Management
+Manage multiple phones (physical + emulators) from one configuration.
+
+### 5. AI Agent Integration
+Integrate with AI agents like Hermes for self-aware phone companionship.
+
 ## What's New in v2.0
 
 ✨ **Universal Device Support**
@@ -195,23 +212,6 @@ burner-phone/
 └── assets/                     # Screenshots and media
     └── screen.png
 ```
-
-## Use Cases
-
-### 1. Burner Phone Automation
-Control temporary/test devices for automation tasks, testing, or privacy-focused workflows.
-
-### 2. Spare Phone AI Companion
-Turn an old phone into an always-listening AI device with camera, mic, and speaker access.
-
-### 3. Emulator Testing
-Test Android apps or automate workflows without needing physical hardware.
-
-### 4. Multi-Device Management
-Manage multiple phones (physical + emulators) from one configuration.
-
-### 5. AI Agent Integration
-Integrate with AI agents like Hermes for self-aware phone companionship.
 
 ## Requirements
 
