@@ -1,0 +1,102 @@
+# Universal Phone Agent - Configuration Template
+# Copy this to ~/.hermes-phone-agent/config.yaml and edit for your device
+
+# =============================================================================
+# CHOOSE YOUR DEVICE TYPE (pick ONE, comment out others)
+# =============================================================================
+
+# --- OPTION 1: Termux Android (Best Performance) ---
+# For physical Android phones with Termux installed
+# Requires: SSH access to device, Termux:API installed
+name: "My Termux Phone"
+device_type: "termux"
+ip_address: "100.93.96.90"        # Your phone's Tailscale IP
+ssh_port: 8022                     # Termux SSH port
+ssh_key: "~/.ssh/phone_access"     # Path to SSH private key
+ssh_user: "droid"                  # Default Termux username
+screen_pin: "4658"                 # Your screen lock PIN (or null if none)
+
+# --- OPTION 2: Standard Android via ADB ---
+# For any Android device with ADB enabled (no Termux needed)
+# Requires: ADB debugging enabled, wireless ADB or USB connection
+# name: "My Android Phone"
+# device_type: "adb"
+# ip_address: "100.x.x.x"          # Your phone's IP address
+# adb_port: 5555                   # Standard ADB port
+# screen_pin: "1234"               # Your screen lock PIN
+
+# --- OPTION 3: Emulator (No Hardware Required) ---
+# For Android Studio emulator, Genymotion, Waydroid
+# Requires: Emulator running and accessible via ADB
+# name: "Android Emulator"
+# device_type: "emulator"
+# ip_address: "localhost"          # Emulators run locally
+# adb_port: 5555                   # Default emulator ADB port
+# screen_pin: null                 # Emulators usually have no PIN
+
+# =============================================================================
+# ADVANCED SETTINGS (usually don't need to change)
+# =============================================================================
+
+# File paths on device
+camera_path: "/sdcard/senter_gaze.jpg"
+audio_input_path: "/sdcard/senter_in.wav"
+audio_output_path: "/sdcard/senter_out.wav"
+
+# =============================================================================
+# EXAMPLE CONFIGURATIONS
+# =============================================================================
+
+# Samsung Galaxy S10 with Termux (Senter default)
+# name: "Samsung Galaxy S10"
+# device_type: "termux"
+# ip_address: "100.93.96.90"
+# ssh_port: 8022
+# ssh_key: "~/.ssh/phone_access"
+# screen_pin: "4658"
+
+# Surface Duo 2 with Termux
+# name: "Surface Duo 2"
+# device_type: "termux"
+# ip_address: "100.79.15.54"
+# ssh_port: 8022
+# ssh_key: "~/.ssh/phone_access"
+
+# Pixel Phone (no Termux)
+# name: "Google Pixel"
+# device_type: "adb"
+# ip_address: "100.x.x.x"
+# adb_port: 5555
+# screen_pin: "your_pin_here"
+
+# Android Studio Emulator
+# name: "Pixel 5 API 34"
+# device_type: "emulator"
+# ip_address: "localhost"
+# adb_port: 5555
+
+# Waydroid (Android in Linux container)
+# name: "Waydroid"
+# device_type: "emulator"
+# ip_address: "localhost"
+# adb_port: 5555
+
+# =============================================================================
+# SETUP INSTRUCTIONS
+# =============================================================================
+
+# 1. Copy this file:
+#    cp config.example.yaml ~/.hermes-phone-agent/config.yaml
+
+# 2. Edit the config file with your device details
+
+# 3. Test the connection:
+#    python3 scripts/test_device.py
+
+# 4. For Termux devices, ensure SSH is running on phone:
+#    $PREFIX/bin/sshd
+
+# 5. For ADB devices, connect first:
+#    adb connect <IP>:5555
+
+# =============================================================================

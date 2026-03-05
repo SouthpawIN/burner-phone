@@ -1,0 +1,11 @@
+# Universal Phone Agent - Python Dependencies
+
+# Core requirements
+PyYAML>=6.0
+
+# For vision helper (OpenAI-compatible API calls)
+requests>=2.31.0
+
+# Optional: For enhanced functionality
+# opencv-python>=4.8.0  # Computer vision (if needed)
+# numpy>=1.24.0         # Numerical operations
