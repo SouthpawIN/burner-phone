@@ -1,4 +1,4 @@
-# 🔥 Universal Phone Agent
+# 🔥 Burner Phone - Universal Phone Agent
 
 ![Burner Phone](burner-phone-pfp.webp)
 
