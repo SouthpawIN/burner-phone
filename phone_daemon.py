@@ -424,6 +424,29 @@ class PhoneAgentDaemon:
         """Convenience logging"""
         self.logger.log(level, f"[Daemon] {message}")
     
+    def _ensure_device_ssh(self):
+        """Ensure device SSH is running, recover via ADB if needed"""
+        self.log("INFO", "Checking device SSH connectivity...")
+        
+        # Import speak skill functions for recovery
+        try:
+            sys.path.insert(0, "/home/sovthpaw/Senter/skills/speak")
+            import speak
+            
+            devices_to_check = [
+                ("duo", "100.79.15.54"),
+                ("s10", "100.93.96.90"),
+            ]
+            
+            for device_name, device_ip in devices_to_check:
+                if speak.check_device_online(device_ip, 8022, speak.Path.home() / ".ssh/phone_access", auto_recover=True):
+                    self.log("INFO", f"✓ {device_name} SSH online")
+                else:
+                    self.log("WARN", f"✗ {device_name} SSH offline and recovery failed - may need manual sshd startup")
+                    
+        except Exception as e:
+            self.log("WARN", f"Device check skipped: {e}")
+    
     def start_daemon(self):
         """Start the daemon in background"""
         self.log("INFO", "Starting phone agent daemon...")
@@ -434,6 +457,9 @@ class PhoneAgentDaemon:
                 f.write(str(os.getpid()))
         except Exception as e:
             self.log("ERROR", f"Failed to write PID file: {e}")
+        
+        # Ensure devices are accessible
+        self._ensure_device_ssh()
         
         # Set up signal handlers
         signal.signal(signal.SIGTERM, self._signal_handler)
