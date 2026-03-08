@@ -5,6 +5,7 @@ import subprocess
 import time
 from pathlib import Path
 from .device_base import DeviceBackend, DeviceConfig
+from typing import Optional
 
 
 class TermuxBackend(DeviceBackend):

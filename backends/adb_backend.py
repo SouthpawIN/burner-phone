@@ -5,6 +5,7 @@ import subprocess
 import time
 import tempfile
 from pathlib import Path
+from typing import Optional
 from .device_base import DeviceBackend, DeviceConfig
 
 
