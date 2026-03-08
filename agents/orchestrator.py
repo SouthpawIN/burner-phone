@@ -27,7 +27,7 @@ class ThreeAgentOrchestrator:
         
         print("[Orchestrator] Three-agent system initialized")
         print(f"  - Frontend: {self.config.get('frontend', {}).get('model', 'qwen-omni')}")
-        print(f"  - Planner: {self.config.get('planner', {}).get('model', 'qwen-7b')}")
+        print(f"  - Planner: {self.config.get('planner', {}).get('model', 'senter-omni')}")
         print(f"  - Hermes: qwopus (server-side)")
     
     def _load_config(self, config_path: str = None) -> Dict[str, Any]:
@@ -42,7 +42,7 @@ class ThreeAgentOrchestrator:
                 "max_context": 8192
             },
             "planner": {
-                "model": "qwen-7b",
+                "model": "senter-omni",
                 "escalation_threshold": 0.7
             }
         }

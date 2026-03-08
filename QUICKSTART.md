@@ -3,8 +3,8 @@
 ## Overview
 
 This repository contains the edge intelligence layer for the distributed three-agent system:
-- **Frontend Agent**: Quick tasks (<2s latency)
-- **Planner Agent**: Task orchestration (<5s latency)  
+- **Frontend Agent**: Quick tasks (<2s latency) - Senter Omni
+- **Planner Agent**: Task orchestration (<5s latency) - Senter Omni  
 - **Hermes Agent**: Heavy reasoning on server (via qwopus)
 
 ## Installation
@@ -28,7 +28,7 @@ frontend:
   max_context: 8192
 
 planner:
-  model: "qwen-7b"
+  model: "senter-omni"
   escalation_threshold: 0.7
 devicetype: "termux"  # or "adb", "emulator"
 EOF
@@ -88,7 +88,7 @@ result = frontend.process("What's the weather?")
 ```python
 from agents.planner import PlannerAgent
 
-config = {"model": "qwen-7b", "escalation_threshold": 0.7}
+config = {"model": "senter-omni", "escalation_threshold": 0.7}
 planner = PlannerAgent(config)
 
 result = planner.process("Debug this complex async code...")

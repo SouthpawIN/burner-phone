@@ -33,7 +33,7 @@ class PlannerAgent:
     
     def __init__(self, config: Dict[str, Any]):
         self.config = config
-        self.model_name = config.get("model", "qwen-7b")
+        self.model_name = config.get("model", "senter-omni")
         self.escalation_threshold = config.get("escalation_threshold", 0.7)
         self.server_address = config.get("server", {}).get("address", "100.84.195.22")
         self.server_port = config.get("server", {}).get("port", 8080)
@@ -167,7 +167,7 @@ PROVIDE A COMPREHENSIVE RESPONSE WITH REASONING:"""
 def main():
     """Test the planner agent"""
     config = {
-        "model": "qwen-7b",
+        "model": "senter-omni",
         "escalation_threshold": 0.7,
         "server": {
             "address": "100.84.195.22",

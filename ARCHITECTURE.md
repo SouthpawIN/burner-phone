@@ -105,9 +105,11 @@ A distributed intelligence system that splits work between edge (phone) and serv
 - Decide when to escalate to Hermes vs handle locally
 - Manage tool selection and sequencing
 
-**Model:** Qwen2.5-7B-Instruct (balanced reasoning)
+**Model:** Senter Omni 3B (fine-tuned for function calling)
 
 **Latency Target:** < 5 seconds for planning
+
+**Note:** Uses the same model as Frontend Agent - both are continuously fine-tuned for improved function calling and task orchestration.
 
 ---
 
