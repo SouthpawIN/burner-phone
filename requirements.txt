@@ -1,11 +1,18 @@
-# Universal Phone Agent - Python Dependencies
+# Three-Agent System Requirements
 
-# Core requirements
-PyYAML>=6.0
-
-# For vision helper (OpenAI-compatible API calls)
+# Core dependencies
+fastapi>=0.104.0
+uvicorn>=0.24.0
 requests>=2.31.0
+pydantic>=2.5.0
 
-# Optional: For enhanced functionality
-# opencv-python>=4.8.0  # Computer vision (if needed)
-# numpy>=1.24.0         # Numerical operations
+# For phone control
+opencv-python-headless>=4.8.0
+pillow>=10.0.0
+
+# For model inference (if running locally)
+llama-cpp-python>=0.2.0
+
+# Utilities
+tqdm>=4.66.0
+python-multipart>=0.0.6
