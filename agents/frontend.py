@@ -86,11 +86,8 @@ class FrontendAgent:
     def handle_simple_qa(self, question: str) -> str:
         """Handle simple Q&A using local model"""
         # Use Qwen Omni for quick responses
-        prompt = f"Provide a brief, direct answer to this question:
+        prompt = f"Provide a brief, direct answer to: {question}"
 
-{question}
-
-Answer:"
         
         # This would call the local model inference
         # Placeholder for now
@@ -152,8 +149,7 @@ def main():
     ]
     
     for user_input in test_inputs:
-        print(f"
-Input: {user_input}")
+        print(f"\nInput: {user_input}")
         result = agent.process(user_input)
         print(f"Task Type: {result['task_type']}")
         print(f"Response: {result['response']}")

@@ -185,8 +185,7 @@ def main():
     ]
     
     for request in test_requests:
-        print(f"
-Request: {request}")
+        print(f"\nRequest: {request}")
         result = planner.process(request)
         print(f"Complexity: {result['complexity']:.2f}")
         print(f"Escalate: {result['escalate']}")

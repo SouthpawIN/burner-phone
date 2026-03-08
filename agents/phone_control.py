@@ -178,7 +178,7 @@ class PhoneControlAgent:
     def _extract_text(self, cmd: str) -> Optional[str]:
         """Extract text to type from command"""
         # Look for quoted text or text after "type"
-        match = re.search(r'type[\s:]+(.+?)'", cmd)
+        match = re.search(r'type[\s:]+(.+?)', cmd)
         if match:
             return match.group(1).strip()
         match = re.search(r'(write|enter)[\s:]+(.+)', cmd)
@@ -202,7 +202,7 @@ class PhoneControlAgent:
         mode = action.parameters.get("mode", "photo")
         if mode == "video":
             result = self._ssh(f"timeout 10 termux-camera-photo -c 0 --video /sdcard/video.mp4 2>/dev/null")
-            return "Recording video... (use "stop video" to end)" if result else "Failed to start video recording"
+            return "Recording video... (use 'stop video' to end)" if result else "Failed to start video recording"
         else:
             result = self._ssh(f"timeout 6 termux-camera-photo -c 1 /sdcard/photo.jpg 2>/dev/null")
             return "Photo taken!" if result else "Failed to take photo"

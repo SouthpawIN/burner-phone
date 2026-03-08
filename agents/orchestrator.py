@@ -118,14 +118,12 @@ class ThreeAgentOrchestrator:
             "Help me understand this complex algorithm optimization problem",
         ]
         
-        print("
-" + "="*60)
+        print("\n" + "="*60)
         print("THREE-AGENT SYSTEM DEMO")
         print("="*60)
         
         for user_input in demo_inputs:
-            print(f"
-[USER] {user_input}")
+            print(f"\n[USER] {user_input}")
             print("-" * 40)
             
             result = self.process(user_input)
@@ -142,8 +140,7 @@ class ThreeAgentOrchestrator:
                     print(f"     Complexity: {stage['complexity']:.2f}")
                     print(f"     Escalated: {stage.get('escalate', False)}")
             
-            print(f"
-Final Response: {result['final_response']}")
+            print(f"\nFinal Response: {result['final_response']}")
             print(f"Total Latency: {result['total_latency_ms']}ms")
             print()
 
@@ -168,14 +165,12 @@ def main():
         print(json.dumps(result, indent=2))
     else:
         # Interactive mode
-        print("
-[Orchestrator] Ready! Enter queries (or 'quit' to exit)")
+        print("\n[Orchestrator] Ready! Enter queries (or 'quit' to exit)")
         print("="*60)
         
         while True:
             try:
-                user_input = input("
-[USER] ").strip()
+                user_input = input("\n[USER] ").strip()
                 if user_input.lower() in ("quit", "exit", "q"):
                     break
                 
@@ -183,8 +178,7 @@ def main():
                     continue
                     
                 result = orchestrator.process(user_input)
-                print(f"
-[RESPONSE] {result['final_response']}")
+                print(f"\n[RESPONSE] {result['final_response']}")
                 print(f"[LATENCY] {result['total_latency_ms']}ms")
                 
             except KeyboardInterrupt:
