@@ -88,9 +88,11 @@ A distributed intelligence system that splits work between edge (phone) and serv
 - Opening apps, browser navigation
 - Simple Q&A from context
 
-**Model:** Qwen2.5-Omni 3B (multimodal, fast)
+**Model:** Senter Omni 3B (served from server over TailScale)
 
 **Latency Target:** < 2 seconds
+
+**Note:** Model inference runs on the central server - the phone only hosts the agent logic and makes API requests.
 
 ---
 
@@ -105,9 +107,11 @@ A distributed intelligence system that splits work between edge (phone) and serv
 - Decide when to escalate to Hermes vs handle locally
 - Manage tool selection and sequencing
 
-**Model:** Senter Omni 3B (fine-tuned for function calling)
+**Model:** Senter Omni 3B (served from server over TailScale)
 
 **Latency Target:** < 5 seconds for planning
+
+**Note:** All model inference runs on the central server - phones only host agent coordination logic.
 
 **Note:** Uses the same model as Frontend Agent - both are continuously fine-tuned for improved function calling and task orchestration.
 
