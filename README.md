@@ -442,12 +442,6 @@ burner-phone/
 | Vision | Qwen2.5-Vision 3B | Screen analysis | :8081 |
 | TTS | Soprano 80M | Text-to-speech | Local |
 
-### Hardware Requirements
-
-**Server (Senter):**
-- GPU: RTX 3090 24GB (dual preferred)
-- RAM: 48GB+
-- Storage: 1TB NVMe
 
 **Phone:**
 - Android 8.0+ with Termux OR ADB wireless debugging
@@ -456,8 +450,6 @@ burner-phone/
 
 ### Supported Devices
 
-✅ Samsung Galaxy S10 (Termux, 100.93.96.90)  
-✅ Surface Duo 2 (Termux, 100.79.15.54)  
 ✅ Any Android with ADB wireless debugging  
 ✅ Android emulators (Android Studio, Genymotion, Waydroid)
 
