@@ -139,7 +139,7 @@ device_type: "termux"
 ip_address: "100.93.96.90"  # Tailscale IP
 ssh_port: 8022
 ssh_key: "~/.ssh/phone_access"
-screen_pin: "4658"
+screen_pin: "5555"
 ```
 
 ### For Standard Android (No Termux)
