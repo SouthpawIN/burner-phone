@@ -322,7 +322,7 @@ python3 scripts/notification_reader.py --daemon
 agent.wake_screen()
 
 # Unlock with PIN
-agent.unlock_screen(pin="4658")
+agent.unlock_screen(pin="5555")
 
 # Type text
 agent.type_text("Hello world")
