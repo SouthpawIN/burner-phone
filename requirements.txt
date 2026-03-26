@@ -1,0 +1,18 @@
+# Three-Agent System Requirements
+
+# Core dependencies
+fastapi>=0.104.0
+uvicorn>=0.24.0
+requests>=2.31.0
+pydantic>=2.5.0
+
+# For phone control
+opencv-python-headless>=4.8.0
+pillow>=10.0.0
+
+# For model inference (if running locally)
+llama-cpp-python>=0.2.0
+
+# Utilities
+tqdm>=4.66.0
+python-multipart>=0.0.6

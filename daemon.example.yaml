@@ -1,0 +1,39 @@
+# Phone Agent Daemon Configuration
+# Copy to ~/.hermes-phone-agent/daemon.yaml and customize
+
+# Logging
+log_file: "/tmp/phone_daemon.log"
+pid_file: "/tmp/phone_daemon.pid"
+state_file: "/tmp/phone_daemon.state"
+memory_file: "~/.hermes-phone-agent/memory.json"
+log_level: "INFO"
+verbose: false
+
+# Attention Detection (PRIMARY: Gaze)
+gaze_detection_enabled: true
+gaze_check_interval: 2.0  # seconds between checks
+gaze_skill_path: "/home/sovthpaw/Senter/skills/senter-aware/aware.py"
+
+# Wake Word (BACKUP)
+wake_word_enabled: true
+wake_words:
+  - "senter"
+  - "hey senter"
+  - "phone"
+  - "hey phone"
+
+# Device Control (burner-phone integration)
+device_config_path: null  # Use default from ~/.hermes-phone-agent/config.yaml
+
+# TTS (speak skill integration)
+speak_skill_path: "/home/sovthpaw/Senter/skills/speak/speak.py"
+speak_device: "auto"  # auto, duo, s10, local
+
+# Memory & Context
+memory_enabled: true
+max_memory_size: 10000  # characters
+conversation_timeout: 300.0  # 5 minutes of silence = new session
+
+# Model Endpoints
+senter_url: "http://100.84.195.22:8081"
+vision_model: "qwen2.5-omni:3b"
